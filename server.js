@@ -2,6 +2,8 @@
 
 var express = require('express');
 var stormpath = require('express-stormpath');
+//const Gnip = require('gnip-insights');
+require('dotenv').config();
 
 var routes = require('./lib/routes');
 
@@ -47,6 +49,7 @@ app.use(stormpath.init(app, {
 app.use('/', routes);
 
 
+
 /**
  * Start the web server.
  */
@@ -54,4 +57,5 @@ app.on('stormpath.ready',function(){
   	console.log('Stormpath Ready');
 	app.listen(process.env.PORT || 3000);
 });
+
 
