@@ -21,7 +21,7 @@ app.set('view engine', 'jade');
 /*
 * Serve Static files: CSS, JS, Images
 */
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('public'));
 
 
 /**
